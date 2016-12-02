@@ -1,0 +1,23 @@
+<div>
+  <p>
+    <!-- Prof Oak Sprite -->
+    <h1>Hello there!<br>
+    Welcome to the world of POKéMON!</h1><br>
+    This world is inhabited far and wide by creatures called POKéMON.<br>
+    Tell me a little about yourself<br>
+  </p>
+</div>
+
+<!-- post /trainers route -->
+
+<form action="/trainers" method="POST">
+  <h3>Now tell me. Are you a boy? Or are you a girl?</h3><br>
+  <input type="text" name="trainer[gender]" placeholder="Boy/Girl"><br>
+  <h3>Let's begin with your name. What is it?</h3><br>
+  <input type="text" name="trainer[name]" placeholder="Name"><br>
+  <h3>Finally, what's your email and choose your password:</h3><br>
+  <input type="text" name="trainer[email]" placeholder="Email"><br>
+  <input type="password" name="trainer[password]" placeholder="Password"><br>
+  <h3>Your very own POKéMON adventure is about to unfold!</h3>
+  <input type="submit" value="Let's go!">
+</form>

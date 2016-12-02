@@ -1,0 +1,10 @@
+<% if current_trainer %>
+  <a href="/trainers/<%= current_trainer.id %> ">Profile Page</a>
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Logout">
+  </form>
+<% else %>
+  <a href="/sessions/new">Login</a>
+  <a href="/trainers/new">Register</a>
+<% end %>

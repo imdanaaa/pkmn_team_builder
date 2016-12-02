@@ -1,0 +1,17 @@
+<% if current_trainer %>
+  <h2>Welcome <%= current_trainer.name %>!</h2>
+<!-- Have a boy/girl sprite based on gender -->
+<% end %>
+
+<a href="/trainers/<%= current_trainer.id %>/teams/new">Create a new team</a>
+
+<br>
+Your teams:
+<br>
+<ul>
+  <% @trainer.teams do |team| %>
+    <li>
+      <a href="/trainers/<%= current_trainer.id %>/teams/<%= team.id %>"><%= team.name %></a>
+    </li>
+  <% end %>
+</ul>

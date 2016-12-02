@@ -1,0 +1,9 @@
+<%= @team.name %>
+
+<ol>
+  <%= @team.pokemons do |pokemon| %>
+    <li>
+      <%= pokemon.name %>
+      <!-- pokemon sprite -->
+    </li>
+</ol>
