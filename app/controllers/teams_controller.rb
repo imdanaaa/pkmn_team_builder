@@ -13,14 +13,17 @@ end
 post '/trainers/:trainer_id/teams' do
   @trainer = Trainer.find(params[:trainer_id])
   @team = Team.new(params[:id])
+  p "*" *100
+  p @team
+  p "*" *100
   if @team.save
-    redirect "/trainers/#{@trainer.id}/teams"
+    redirect to "/trainers/#{@trainer.id}"
   else
     erb :'teams/new'
   end
 end
 
-get '/trainers/:trainder_id/teams/:id' do
+get '/trainers/:trainer_id/teams/:id' do
   @trainer = Trainer.find(params[:trainer_id])
   @team = Team.find(params[:id])
   erb :'teams/show'

@@ -1,4 +1,4 @@
-include HTTParty
+require 'httparty'
 
 helpers do
 
@@ -10,4 +10,5 @@ helpers do
     pokemon["sprites"]["front_default"] = pokemon_sprite
     pokemon_sprite
   end
+
 end
