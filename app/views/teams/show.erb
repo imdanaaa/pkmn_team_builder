@@ -1,9 +1,11 @@
 <%= @team.name %>
 
-<ol>
+<ol id="team_members">
   <%= @team.pokemons do |pokemon| %>
-    <li>
-      <%= pokemon.name %>
-      <!-- pokemon sprite -->
-    </li>
+  <%= erb :"teams/_new_pokemon",{layout:false, locals: {pokemon: pokemon}} %>
 </ol>
+
+<section id="new_pokemon_container" class="left content">
+<h2>Add a Pokémon to your team</h2>
+<%= erb :"teams/_new_pokemon_form", { layout: false, locals: { pokemon: @pokemon}}%>
+</section>

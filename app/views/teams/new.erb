@@ -1,9 +1,14 @@
+<section id="sidebar" class="sidebar right">
+</section>
+
+<section id="team_form_container" class="left content">
 <h1>Let's build a team!</h1>
 <br>
 
-<form action="/trainers/<%= @trainer.id %>/teams" method="POST">
+<form id="team_form" action="/trainers/<%= @trainer.id %>/teams" method="POST">
 <h3>Give your team a name</h3>
   <input type="text" name="team[name]" placeholder="Name"><br>
 
   <input type="submit" value="Create Team">
 </form>
+</section>
