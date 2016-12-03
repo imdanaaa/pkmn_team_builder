@@ -2,9 +2,9 @@
   <h2>Welcome <%= current_trainer.name %>!</h2>
 <!-- Have a boy/girl sprite based on gender -->
     <% if current_trainer.gender.downcase == "boy" %>
-      <img src="http://cdn.bulbagarden.net/upload/e/e7/Sun_Moon_Protagonist_male.png" alt="Boy" width="210" height="473">
+      <img src="http://cdn.bulbagarden.net/upload/e/e7/Sun_Moon_Protagonist_male.png" alt="Boy" width="105" height="236">
     <% elsif current_trainer.gender.downcase == "girl" %>
-      <img src="http://cdn.bulbagarden.net/upload/7/74/Sun_Moon_Protagonist_female.png" alt="Girl" width="214" height="473">
+      <img src="http://cdn.bulbagarden.net/upload/7/74/Sun_Moon_Protagonist_female.png" alt="Girl" width="107" height="236">
     <% else %>
       <img src="http://vignette3.wikia.nocookie.net/youtubepoop/images/4/4c/Pokeball.png/revision/latest?cb=20150418234807">
     <% end %>
@@ -17,7 +17,7 @@
 Your teams:
 <br>
 <ul>
-  <% @trainer.teams do |team| %>
+  <% current_trainer.teams do |team| %>
     <li>
       <a href="/trainers/<%= current_trainer.id %>/teams/<%= team.id %>"><%= team.name %></a>
     </li>

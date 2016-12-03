@@ -2,7 +2,7 @@
 
 <ol id="team_members">
   <%= @team.pokemons do |pokemon| %>
-  <%= erb :"teams/_new_pokemon",{layout:false, locals: {pokemon: pokemon}} %>
+  <%= erb :"teams/_new_pokemon", {layout:false, locals: {pokemon: pokemon}} %>
 </ol>
 
 <section id="new_pokemon_container" class="left content">

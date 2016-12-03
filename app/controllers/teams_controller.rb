@@ -12,7 +12,7 @@ end
 
 post '/trainers/:trainer_id/teams' do
   @trainer = Trainer.find(params[:trainer_id])
-  @team = Team.new(params[:id])
+  @team = @trainer.teams.create(params[:team])
   p "*" *100
   p @team
   p "*" *100
@@ -23,9 +23,9 @@ post '/trainers/:trainer_id/teams' do
   end
 end
 
-get '/trainers/:trainer_id/teams/:id' do
+get '/trainers/:trainer_id/teams/:team_id' do
   @trainer = Trainer.find(params[:trainer_id])
-  @team = Team.find(params[:id])
+  @team = @trainer.teams.find(params[:team_id])
   erb :'teams/show'
 end
 
